@@ -6,7 +6,7 @@
         h[categoria][i] = '*';
     }
 
-    void imprimir_histograma (char *h[], int valores[], int categorias){
+    void imprime_histograma (char *h[], int valores[], int categorias){
         if (categorias == 0){
         printf("vazio");
         return;
@@ -34,14 +34,14 @@ int main()
             histograma[i] = NULL;
         else
             histograma[i] = (char *) malloc(valores[i] * sizeof(char));
-        povoa_histograma(histograma, valores[i], i);
+        povoa_histograma(histograma,valores[i],i);
     }
 
-    imprimir_histograma(histograma, valores, categorias);
+    imprime_histograma(histograma, valores, categorias);
 
     for(int i = 0; i < categorias; i++)
         if(histograma[i] != NULL)
         free(histograma[i]);
 
-return 0;
+    return 0;
 }
